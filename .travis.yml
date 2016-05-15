@@ -2,6 +2,9 @@ sudo: required
 dist: trusty
 language: generic
 install: git clone https://github.com/QubesOS/qubes-builder ~/qubes-builder
+before_script: 
+ - free -m
+ - df -h
 script: ~/qubes-builder/scripts/travis-build
 # keep the log under 4MB limit
 env:
