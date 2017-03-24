@@ -27,7 +27,7 @@
 %endif
 
 # Hypervisor ABI
-%define hv_abi  4.7
+%define hv_abi  4.8
 
 %{!?version: %define version %(cat version)}
 %{!?rel: %define rel %(cat rel)}
@@ -366,7 +366,7 @@ find %{buildroot} -print | xargs ls -ld | sed -e 's|.*%{buildroot}||' > f1.list
 rm -rf %{buildroot}/usr/*-xen-elf
 
 # hypervisor symlinks
-rm -rf %{buildroot}/boot/xen-4.7.gz
+rm -rf %{buildroot}/boot/xen-4.8.gz
 rm -rf %{buildroot}/boot/xen-4.gz
 rm -rf %{buildroot}/boot/xen.gz
 %if !%build_hyp
